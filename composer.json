@@ -1,0 +1,38 @@
+{
+    "name": "ImLiam/ShareableLink",
+    "description": "Conveniently generate shareable URLs for various social media websites",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Liam Hammett",
+            "email": "liam@liamhammett.com",
+            "homepage": "https://liamhammett.com/",
+            "role": "Developer"
+        },
+        {
+            "name": "Dennis Smink",
+            "homepage": "https://dennissmink.nl/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "autoload": {
+        "classmap": [
+            "src/ShareableLink.php"
+        ],
+        "files": [
+            "src/Functions.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "archive": {
+        "exclude": ["/vendor", "/tests"]
+    }
+}
