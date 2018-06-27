@@ -4,10 +4,18 @@
 
 Conveniently generate shareable URLs for a variety of different social media websites, using the syntax each uses for their own links.
 
+## Installation
+
+You can install this package with Composer using the following command:
+
+```bash
+composer require imliam/shareable-link:^1.0.0
+```
+
 ## Example Usage
 
 ```php
-$url = new ShareableLink('http://example.com/', 'Example Site');
+$url = new \ImLiam\ShareableLink('http://example.com/', 'Example Site');
 
 // Alternatively, with the helper function:
 // shareable_link('http://example.com/', 'Example Site');
@@ -36,7 +44,7 @@ echo $url->google;
 A link shareable through Facebook requires an app ID from the platform. By default, this will attempt to be obtained through a `FACEBOOK_APP_ID` environment variable. However, if this environment variable does not exist, or you need to pass through different app IDs for different URLs, you can pass one through explicitly to the `getFacebookUrl()` method.
 
 ```php
-$url = new ShareableLink('http://example.com/', 'Example Site');
+$url = new \ImLiam\ShareableLink('http://example.com/', 'Example Site');
 
 putenv('FACEBOOK_APP_ID=ABC123');
 
@@ -56,11 +64,11 @@ The advantage of this is that you get full control over the URL and title you wa
 ```php
 class News extends Model
 {
-    public function getShareUrlAttribute(): ShareableLink
+    public function getShareUrlAttribute(): \ImLiam\ShareableLink
     {
         $url = route('news.show', $this->slug);
 
-        return new ShareableLink($url, $this->title);
+        return new \ImLiam\ShareableLink($url, $this->title);
     }
 }
 ```
