@@ -65,7 +65,7 @@ class ShareableLink
     {
         return $this->buildFormattedUrl('https://twitter.com/intent/tweet?', [
             'url' => $this->url,
-            'text' => urlencode($this->limit($this->title, 120)),
+            'text' => urlencode($this->limit($this->title, 240)),
         ]);
     }
 
