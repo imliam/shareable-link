@@ -7,6 +7,8 @@ use ImLiam\ShareableLink;
 
 class ShareableLinkTest extends TestCase
 {
+    public ShareableLink $url;
+
     public function setUp(): void
     {
         parent::setUp();
